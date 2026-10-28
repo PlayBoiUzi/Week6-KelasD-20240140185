@@ -2,9 +2,9 @@
 
 Tugas individu PPAW Week 6. Dua halaman web statis (HTML + CSS + JavaScript native, tanpa library) yang terhubung lewat navigasi di bagian atas.
 
-**Nama:** [ISI NAMA LENGKAP]
-**NIM:** [ISI NIM]
-**Kelas:** [ISI KELAS]
+**Nama:** M Dzaky Rafi Al Aziz
+**NIM:** 20240140185
+**Kelas:** D
 
 ## Halaman
 
@@ -65,3 +65,7 @@ Buka `public/index.html` di browser. Tidak perlu install apa pun, tetapi halaman
 - [x] DOM dan Event Handling diterapkan pada form
 - [x] Validasi dan umpan balik form berfungsi
 - [x] Tidak ada error yang mengganggu fungsi utama
+
+Hasil nya
+<img width="1919" height="942" alt="image" src="https://github.com/user-attachments/assets/298f5c28-5757-44a2-bcdd-cc22b306a38e" />
+
