@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etalase Produk — Week 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <span class="brand">TokoKu</span>
+      <ul>
+        <li><a href="index.html" aria-current="page">Etalase</a></li>
+        <li><a href="form.html">Hitung Diskon</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Etalase Produk</h1>
+        <p>Data produk diambil langsung dari DummyJSON memakai Fetch API, lalu ditampilkan lewat manipulasi DOM.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="toolbar">
+        <div class="field">
+          <label for="search">Cari produk</label>
+          <input type="search" id="search" placeholder="Contoh: laptop, mascara" autocomplete="off" disabled>
+        </div>
+        <div class="field">
+          <label for="category">Kategori</label>
+          <select id="category" disabled>
+            <option value="all">Semua kategori</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="error-box" class="error-box" role="alert" hidden>
+        <p id="error-message"></p>
+        <button type="button" id="retry-btn" class="btn">Coba lagi</button>
+      </div>
+
+      <div id="product-grid" class="grid" aria-busy="true"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">PPAW Week 6 — JavaScript DOM, Event Handling, dan Fetch API</div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

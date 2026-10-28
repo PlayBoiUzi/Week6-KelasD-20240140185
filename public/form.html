@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hitung Diskon — Week 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <span class="brand">TokoKu</span>
+      <ul>
+        <li><a href="index.html">Etalase</a></li>
+        <li><a href="form.html" aria-current="page">Hitung Diskon</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Hitung Diskon</h1>
+        <p>Masukkan harga, diskon, dan jumlah barang. Hasil dihitung otomatis dan bisa disimpan ke riwayat.</p>
+      </div>
+    </section>
+
+    <section class="container layout">
+      <form id="discount-form" class="panel" novalidate>
+        <div class="field">
+          <label for="productName">Nama produk</label>
+          <input type="text" id="productName" name="productName" placeholder="Contoh: Sepatu lari" autocomplete="off">
+          <p class="error" id="productName-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="price">Harga satuan (Rp)</label>
+          <input type="number" id="price" name="price" placeholder="Contoh: 250000" inputmode="numeric">
+          <p class="error" id="price-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="discount">Diskon (%)</label>
+          <input type="number" id="discount" name="discount" placeholder="0 – 90" inputmode="decimal">
+          <div class="chips" role="group" aria-label="Pilihan diskon cepat">
+            <button type="button" class="chip" data-discount="10">10%</button>
+            <button type="button" class="chip" data-discount="25">25%</button>
+            <button type="button" class="chip" data-discount="50">50%</button>
+            <button type="button" class="chip" data-discount="70">70%</button>
+          </div>
+          <p class="error" id="discount-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="qty">Jumlah barang</label>
+          <input type="number" id="qty" name="qty" value="1" inputmode="numeric">
+          <p class="error" id="qty-error" aria-live="polite"></p>
+        </div>
+
+        <p class="preview" id="preview" aria-live="polite">Isi semua kolom untuk melihat perkiraan harga.</p>
+
+        <div class="actions">
+          <button type="submit" class="btn">Hitung dan simpan</button>
+          <button type="reset" class="btn btn-ghost" id="reset-btn">Kosongkan</button>
+        </div>
+
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      </form>
+
+      <section class="panel" aria-labelledby="history-title">
+        <div class="panel-head">
+          <h2 id="history-title">Riwayat perhitungan</h2>
+          <button type="button" class="link-btn" id="clear-history" hidden>Hapus semua</button>
+        </div>
+        <p class="empty" id="history-empty">Belum ada perhitungan. Hasil yang kamu simpan akan muncul di sini.</p>
+        <ul class="history" id="history-list"></ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">PPAW Week 6 — JavaScript DOM, Event Handling, dan Fetch API</div>
+  </footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* ===== Gaya khusus halaman form (dimuat setelah style.css) ===== */
+
+.layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 1.5rem; margin-block: 1.75rem 3rem; align-items: start; }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
+.panel h2 { margin: 0; font-size: 1.15rem; }
+
+/* Validasi */
+input.invalid { border-color: var(--danger); background: #fff8f8; }
+.error { min-height: 1.25rem; margin: .3rem 0 0; font-size: .85rem; color: var(--danger); }
+
+/* Diskon cepat */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+.chip { font: inherit; font-size: .88rem; font-weight: 600; padding: .25rem .8rem; color: var(--teal-dark); background: #dff1ef; border: 1.5px solid transparent; border-radius: 999px; cursor: pointer; }
+.chip:hover { border-color: var(--teal); }
+
+/* Pratinjau hasil */
+.preview { margin: .25rem 0 1.25rem; padding: .85rem 1rem; border-radius: 8px; background: var(--bg); color: var(--muted); font-size: .93rem; }
+.preview.ready { background: #dff1ef; color: var(--teal-dark); font-weight: 600; }
+
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.feedback { min-height: 1.5rem; margin: 1rem 0 0; font-size: .93rem; font-weight: 500; }
+.ok-text { color: var(--ok); }
+.error-text { color: var(--danger); }
+
+/* Riwayat */
+.empty { margin: 0; color: var(--muted); font-size: .93rem; }
+.history { list-style: none; margin: 0; padding: 0; }
+.history li { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: .85rem 0; border-top: 1px solid var(--line); }
+.history li:first-child { border-top: 0; }
+.history div { display: flex; flex-direction: column; font-size: .9rem; color: var(--muted); }
+.history strong { color: var(--ink); font-size: 1rem; }
+.history .total { color: var(--teal-dark); font-weight: 600; }
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+}
